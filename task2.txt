@@ -68,7 +68,63 @@ m=00001001
   
   
 -------------------------------------------------------------------------------
+THE LEFT SHIFT
+~~~~~~~~~~~~~~~
+
+#include <stdio.h>
+int main()
+{
+int i = 1;
+printf("%d\n", i << 1);
+printf("%d\n", i);
+}
 
 
+The << operator performs what is called a left shift .
+FOR i =1
+the binary representation is
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
 
-  
+{
+
+so after left shift,i.e i<<1
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0     = 2
+
+for i<<2
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0     = 4
+
+for i<<3
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0     = 8
+
+for i<<4
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0     = 16
+
+}
+
+This is what the left shift does; it deletes the leftmost bit (bit D31) and moves
+each of the remaining bits to the left. Now, the rightmost position will be vacant
+because all the bits have moved left by one position. This vacant spot is filled
+with a zero.
+----------------------------------------------------------------------------------------------------
+THE RIGHT SHIFT
+~~~~~~~~~~~~~~~
+
+#include <stdio.h>
+int main()
+{
+unsigned int i = 2;
+printf("%d\n", i >> 1);
+}
+
+THE BIT REPRESENTATION OF i=2
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+so after i >>1
+
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1    = 1
+
+The right shift operation results in the rightmost bit (bit D0) getting deleted and each bit moving to the right by one position. 
+The vacated bit position (at the extreme left) is filled with zero.
+
+The right shift is equivalent to integer division by 2.
+------------------------------------------------------------------------------------------------------------
+
