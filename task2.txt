@@ -1,4 +1,4 @@
-how to store a number in memory
+How to store a number in memory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 for a integer let n=5,in the memory it is represented as :
 
@@ -12,3 +12,63 @@ and the leftmost (most signicant) bit being labelled as D31.
 
 -----------------------------------------------------------------------------------
 
+BITWISE AND , OR and XOR
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#include <stdio.h>          
+int main()                  
+{                           
+int n = 8;
+int m = 9;
+printf("%d", n & m);
+return 0;
+}
+
+this is the AND operation for which the output was 8.
+
+n=00001000
+m=00001001
+-------------
+  00001000      = 8
+  
+  
+  
+  #include <stdio.h>          
+int main()                  
+{                           
+int n = 8;
+int m = 9;
+printf("%d", n | m);
+return 0;
+}
+
+this is the OR operation for which the ouput was 9.
+
+n=00001000
+m=00001001
+----------
+  00001001     = 9
+  
+  
+  #include <stdio.h>          
+int main()                  
+{                           
+int n = 8;
+int m = 9;
+printf("%d", n ^ m);
+return 0;
+}
+
+this is the XOR operation for which the output was 1.
+
+n=00001000
+m=00001001
+----------
+  00000001   =  1
+  
+  
+-------------------------------------------------------------------------------
+
+
+
+  
