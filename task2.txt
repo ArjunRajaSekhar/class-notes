@@ -127,4 +127,66 @@ The vacated bit position (at the extreme left) is filled with zero.
 
 The right shift is equivalent to integer division by 2.
 ------------------------------------------------------------------------------------------------------------
+BIT WISE ONES COMPLIMENT
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+#include <stdio.h>
+int main()
+{
+int i = 0;
+printf("%d\n", ~i);
+}
+
+bit wise ones complement of 0 is -1
+
+--------------------------------------------------------------------------------------
+
+IDENTITIES
+`~~~~~~~~~~~
+If the symbol b represents a single bit (whose value can be either 1 or 0), the
+following simple identities are true:
+1. b & 1 = b (if b is 0, the result is 0; if b is 1, the result is 1)
+2. b & 0 = 0
+3. b | 0 = b
+4. b | 1 = 1
+5. b ^ 1 = complement of b
+6. b ^ b = 0
+
+example 3 solu:
+
+
+#include <stdio.h>
+int main()
+{
+int n;
+scanf("%d", &n);
+printf("%d\n", (1<<i)|n);
+}
+
+
+example 4 solu:
+
+#include <stdio.h>
+int main()
+{
+int n ;
+int i;
+scanf("%d%d",&n,&i);
+printf("%d\n",(~(1<<i))&n);
+}
+
+example 5 solu:
+
+#include <stdio.h>
+int main()
+{
+int n ;
+int m;
+scanf("%d%d",&n,&m);
+printf("%d\n",(~((~0)<<m))&n);
+}
+
+
+
+
 
